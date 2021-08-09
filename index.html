@@ -67,7 +67,7 @@
     <article id="post-韦达跳跃" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/" class="article-date">
-  <time datetime="2021-08-09T09:23:30.000Z" itemprop="datePublished">2021-08-09</time>
+  <time datetime="2021-08-09T10:33:18.000Z" itemprop="datePublished">2021-08-09</time>
 </a>
     
   </div>
@@ -87,29 +87,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="韦达跳跃"><a href="#韦达跳跃" class="headerlink" title="韦达跳跃"></a>韦达跳跃</h2><p>起因是b哥深夜突然甩了个数学题给我。</p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/1.jpg" alt="1"></p>
-<p>求这个玩意儿 x，y的整数解形式。👴一看，这不就重要不等式吗，答案很显然。</p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/1.jpg">求这个玩意儿 x，y的整数解形式。👴一看，这不就重要不等式吗，答案很显然。</p>
 <p>后来发觉我看反了。</p>
 <p>总而言之就是求 (x^2+y^2)/(x*y+1)为整数时 x和y的形式是什么</p>
 <p>首先按照常规 x^2+y^2=k(1+x*y) 当然这个k⑧是0 肯定得是正整数。</p>
 <p>然后👴就走上了错误的道路 尝试通过k的值找规律 然而肯定是不行的 因为这个题k很必要 我搁着充分的整显然很NT</p>
 <p>思考无果 去寻求b哥正解是啥 聊天记录如下：</p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/2.png" alt="2"></p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/2.png" alt="2"></p>
 <p>韦达跳跃 我一看名字就想起了韦达定理 不知道这俩有啥关系 去百度搜搜看</p>
 <p>好家伙 不仅是IMO的题 还是最难的那道 b哥就是b哥 太抬举我了。</p>
 <p>于是去看看解答如何：</p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/3.png" alt="3"></p>
-<p>首先假设k为非平方数。<img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/4.jpg" alt="4"></p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/3.png" alt="3"></p>
+<p>首先假设k为非平方数。<img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/4.jpg" alt="4"></p>
 <p>解答果然用了韦达定理，意思是将a作为未知数，b作为常量，通过韦达定理把a1 a2两个解 用a1单独表示出来即可。</p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/5.jpg" alt="5"></p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/Users/kali-ubuntu/Desktop/韦达跳跃/6.jpg" alt="6"></p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/5.jpg" alt="5"></p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/6.jpg" alt="6"></p>
 <p>由式子1可知 a2必然为整数 因为kb a1均为正整数</p>
 <p>由式子2可知a2必然不为0 因为我们假设k不为平方数 且a1！=0 故b1^2-k必然不为0</p>
 <p>有意思的就在这里，根据</p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/7.png" alt="7"></p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/7.png" alt="7"></p>
 <p>我们得知 a1必然小于等于a2</p>
 <p>但是根据式子2 我们得知 b1&lt;a1 所以 (b1^2-k)/a1 必然小于a1</p>
-<p><img src="/2021/08/09/%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83/8.jpg" alt="8"></p>
+<p><img src="https://raw.githubusercontent.com/Nauyu1l/ImgHosting/master/img/8.jpg" alt="8"></p>
 <p>这就产生了矛盾 因为你假设的情况是 a1+b1为最小和 但是出现了a2+b1&lt;a1+b1的情况 于是这种就不成立了</p>
 <p>根据反证法可得 k在正整数的前提下 不是非平方数 那就是平方数 于是该题得证</p>
 <p>啥也别说了 没有b哥就没有今天这个博客 为了庆祝👴博客没有胎死腹中 👴写下了文末的感谢词 决定开学请b哥好好的喝一场。</p>
