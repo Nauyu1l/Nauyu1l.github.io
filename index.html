@@ -64,6 +64,102 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-第3次作业：卷积神经网络" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="article-date">
+  <time datetime="2021-10-13T05:38:50.000Z" itemprop="datePublished">2021-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">第3次作业：卷积神经网络</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第3次作业：卷积神经网络"><a href="#第3次作业：卷积神经网络" class="headerlink" title="第3次作业：卷积神经网络"></a>第3次作业：卷积神经网络</h1><h2 id="part1"><a href="#part1" class="headerlink" title="part1"></a>part1</h2><p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../1.png" alt="1"></p>
+<p>首先是介绍了提纲，了解了视频基本内容</p>
+<p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../2.png" alt="2"></p>
+<p>随后是对深度学习的步骤进行了概括性的说明</p>
+<p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../3.png" alt="3"></p>
+<p>这里介绍了损失函数的定义以及常用的公式，主要用于衡量吻合度（偏差）</p>
+<p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../4.png" alt="4"></p>
+<p>这里介绍了为什么全连接网络处理在图像处理准确度不高的原因：参数过多，考虑的因素太多导致过拟合（即抓不住主要的内容，被细枝末节的信息干扰）。而卷积神经网络将图像分割成块状（局部关联）且进行了参数共享，降低了复杂度与信息熵，抓住了主要的内容，提高了准确度。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013134707088.png" alt="image-20211013134707088"></p>
+<p>而后了解到了卷积的定义以及卷积的计算方式。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013134837806.png" alt="image-20211013134837806"></p>
+<p>即对应位置相乘再相加为一格 通过平移形成了特征图（走到右下角）</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013135004982.png" alt="image-20211013135004982"></p>
+<p>验证。</p>
+<p>所谓步长就是指平移的单位格个数。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013135157107.png" alt="image-20211013135157107"></p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013135222096.png" alt="image-20211013135222096"></p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013135538947.png" alt="image-20211013135538947"></p>
+<p>关于这个计算我有一个问题：输出在前面所讲为输出时的概率 而这里却是一个具体的数。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013135816991.png" alt="image-20211013135816991"></p>
+<p>处理深度学习，如果不好看每一层学习的内容可以将其可视化查看。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013135903111.png" alt="image-20211013135903111"></p>
+<p>指在尽量少量损失信息的同时对图片进行缩放。优点如图所示</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013140005171.png" alt="image-20211013140005171"></p>
+<p>最大和平均。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013140436460.png" alt="image-20211013140436460"></p>
+<p>简介了历史</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013140616905.png" alt="image-20211013140616905"></p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013140927123.png" alt="image-20211013140927123"></p>
+<p>卷积-ReLU-池化 介绍了data和参数的计算（卷积）池化只是缩放不存在参数计算。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013141148627.png" alt="image-20211013141148627"></p>
+<p>这个只是调整了一下参数。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013141427937.png" alt="image-20211013141427937"></p>
+<p>VGG 增加了一些层数，同时数据量也是ALEX的2倍左右，提出了迁移学习这一说法即利用别人现有的参数跑自己的任务。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013141544940.png" alt="image-20211013141544940"></p>
+<p>这个模型改变很大，且没有全连接，所以数据量小。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013141846889.png" alt="image-20211013141846889"></p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013141933399.png" alt="image-20211013141933399"></p>
+<p>逐渐升级。用卷积核降低参数量，降低卷积核的大小。</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013142043032.png" alt="image-20211013142043032"></p>
+<p>带升级。时至今日也经常使用。</p>
+<p>同样也是减少了FC</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013142155586.png" alt="image-20211013142155586"></p>
+<p>这里去除掉重复的主体部分，突出微小的变化（异或）</p>
+<p>开始经典实战：</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20211013142501104.png" alt="image-20211013142501104"></p>
+<p>介绍了各种各样参数的意义。</p>
+<h2 id="part2"><a href="#part2" class="headerlink" title="part2"></a>part2</h2><p>1.Convnet</p>
+<p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../6.png" alt="6"></p>
+<p>在能利用局部联系时，卷积远超全连接。<img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../7.png" alt="7"></p>
+<p>但可惜，被打乱顺序后，没有局域联系，卷积的优势荡然无存。</p>
+<p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../9.png" alt="9"></p>
+<p>CNN处理下 准确率只有61。。</p>
+<p>盲猜一手更换成ResNet准确率应该有不小的提升。。</p>
+<p><img src="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/../../10.png" alt="10"></p>
+<p>这里一开始没有用GPU训练，导致第一个就卡住了。</p>
+<p>简单的VGG训练就可以达到83%，试想换成ResNet加上Attention机制不知道会如何。。</p>
+<p>本期作业到这里 我们下周再见~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" data-id="ckup5zgic0000g4ve7mez1utu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SE/" rel="tag">SE</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-第一次作业：深度学习基础" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/10/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" class="article-date">
@@ -309,7 +405,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/SE/" style="font-size: 10px;">SE</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/%E6%95%B4%E6%B4%BB/" style="font-size: 10px;">整活</a> <a href="/tags/%F0%9F%91%B4/" style="font-size: 10px;">👴</a>
+      <a href="/tags/SE/" style="font-size: 20px;">SE</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/%E6%95%B4%E6%B4%BB/" style="font-size: 10px;">整活</a> <a href="/tags/%F0%9F%91%B4/" style="font-size: 10px;">👴</a>
     </div>
   </div>
 
@@ -329,6 +425,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/10/13/%E7%AC%AC3%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">第3次作业：卷积神经网络</a>
+          </li>
         
           <li>
             <a href="/2021/10/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A%EF%BC%9A%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">第一次作业：深度学习基础</a>
